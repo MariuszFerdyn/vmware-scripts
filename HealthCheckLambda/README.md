@@ -102,3 +102,8 @@ mkdir -p ~/.aws-lambda-rie && curl -Lo ~/.aws-lambda-rie/aws-lambda-rie https://
 docker run -d -v ~/.aws-lambda-rie:/aws-lambda -p 9000:8080 --entrypoint /aws-lambda/aws-lambda-rie health:latest /usr/local/bin/python
 curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" -d '{}'
 ```
+
+To check logs in console:
+```
+docker exec -it ee3ac45c635c /bin/bash
+```
